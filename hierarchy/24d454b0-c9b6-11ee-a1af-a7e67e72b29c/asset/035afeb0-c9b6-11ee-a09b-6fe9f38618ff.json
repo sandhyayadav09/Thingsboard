@@ -1,0 +1,68 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "a59f05f0-c9b5-11ee-a09b-6fe9f38618ff"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "24d454b0-c9b6-11ee-a1af-a7e67e72b29c"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "035afeb0-c9b6-11ee-a09b-6fe9f38618ff"
+    },
+    "label" : null,
+    "name" : "Manufacturing Plant B",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "24d454b0-c9b6-11ee-a1af-a7e67e72b29c"
+    },
+    "type" : "Manufacture"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "035afeb0-c9b6-11ee-a09b-6fe9f38618ff"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "bc48b850-c9b5-11ee-a09b-6fe9f38618ff"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "location",
+      "lastUpdateTs" : 1707812055759,
+      "longValue" : null,
+      "strValue" : "cityB"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.45,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1707749819269,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.33,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1707749831651,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}
