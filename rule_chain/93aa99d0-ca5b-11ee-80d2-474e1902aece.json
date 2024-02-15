@@ -179,20 +179,20 @@
         "layoutY" : 125
       },
       "configuration" : {
-        "useSystemSmtpSettings" : true,
+        "useSystemSmtpSettings" : false,
         "smtpProtocol" : "smtp",
-        "smtpHost" : "localhost",
+        "smtpHost" : "smtp.sendgrid.net",
         "smtpPort" : 25,
         "timeout" : 10000,
-        "enableTls" : false,
+        "enableTls" : true,
         "tlsVersion" : "TLSv1.2",
         "enableProxy" : false,
         "proxyHost" : null,
         "proxyPort" : null,
         "proxyUser" : null,
         "proxyPassword" : null,
-        "username" : "sandhya.yadav+dev2@xeeed.io",
-        "password" : "Sandhya@12112181"
+        "username" : "apikey",
+        "password" : "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"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
