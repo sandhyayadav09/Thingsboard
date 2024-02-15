@@ -37,16 +37,32 @@
       "toIndex" : 4,
       "type" : "Success"
     }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 6,
       "type" : "Success"
     }, {
       "fromIndex" : 3,
       "toIndex" : 4,
       "type" : "Success"
     }, {
+      "fromIndex" : 3,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
       "fromIndex" : 4,
       "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
@@ -247,6 +263,29 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1427,
+        "layoutY" : 344
+      },
+      "configuration" : {
+        "serviceIdMetaDataAttribute" : "serviceId",
+        "sessionIdMetaDataAttribute" : "sessionId",
+        "requestIdMetaDataAttribute" : "requestId"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a859f820-cbe2-11ee-a273-6fe9f38618ff"
+      },
+      "name" : "Reply to Bot",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode"
     } ],
     "ruleChainConnections" : null
   },
