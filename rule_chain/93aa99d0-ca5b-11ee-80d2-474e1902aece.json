@@ -118,8 +118,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 664,
-        "layoutY" : 169
+        "layoutX" : 684,
+        "layoutY" : 168
       },
       "configuration" : {
         "useSystemReportsServer" : true,
@@ -129,7 +129,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
