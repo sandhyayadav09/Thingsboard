@@ -82,8 +82,26 @@
       "configuration" : {
         "useSystemReportsServer" : true,
         "reportsServerEndpointUrl" : null,
-        "useReportConfigFromMessage" : true,
-        "reportConfig" : null
+        "useReportConfigFromMessage" : false,
+        "reportConfig" : {
+          "baseUrl" : "https://thingsboard.cloud",
+          "useDashboardTimewindow" : true,
+          "timewindow" : {
+            "selectedTab" : 1,
+            "history" : {
+              "historyType" : 0,
+              "interval" : 1000,
+              "timewindowMs" : 86400000
+            }
+          },
+          "namePattern" : "report-%d{yyyy-MM-dd_HH:mm:ss}",
+          "type" : "pdf",
+          "timezone" : "Asia/Calcutta",
+          "useCurrentUserCredentials" : true,
+          "userId" : "0d95aac0-c9b5-11ee-a09b-6fe9f38618ff",
+          "dashboardId" : "45a4dd00-c9b5-11ee-a0e0-15431c20b1f9",
+          "state" : "W3siaWQiOiJkZWZhdWx0IiwicGFyYW1zIjp7fX0seyJpZCI6Im1hbnVmYWN0dXJpbmdfcGxhbnRfc3RhdGUiLCJwYXJhbXMiOnsiZW50aXR5SWQiOnsiaWQiOiJmMzZhN2Q1MC1jOWI1LTExZWUtYTFhZi1hN2U2N2U3MmIyOWMiLCJlbnRpdHlUeXBlIjoiQVNTRVQifSwiZW50aXR5TmFtZSI6Ik1hbnVmYWN0dXJpbmcgUGxhbnQgQSIsImVudGl0eUxhYmVsIjoiTWFudWZhY3R1cmluZyBQbGFudCBBIn19XQ=="
+        }
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
