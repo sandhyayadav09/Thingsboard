@@ -7,7 +7,10 @@
     "configuration" : null,
     "debugMode" : true,
     "externalId" : null,
-    "firstRuleNodeId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "215496b0-cbcd-11ee-9015-a7e67e72b29c"
+    },
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "93aa99d0-ca5b-11ee-80d2-474e1902aece"
@@ -17,12 +20,118 @@
     "type" : "CORE"
   },
   "metaData" : {
-    "connections" : null,
-    "firstNodeIndex" : null,
-    "nodes" : [ ],
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Assembly-LineA"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "Assembly-LineB"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "Assembly-LineC"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 328,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg, msgType) {\n    if(msg.method === 'getAssembly-LineADetails'){\n        return ['Assembly-LineA'];\n    }\n    else if(msg.method === 'getAssembly-LineBDetails'){\n        return ['Assembly-LineB'];\n    }\n    else if(msg.method === 'getAssembly-LineCDetails'){\n        return ['Assembly-LineC'];\n    }\n\n}\nreturn nextRelation(metadata, msg, msgType);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "215496b0-cbcd-11ee-9015-a7e67e72b29c"
+      },
+      "name" : "check method",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 664,
+        "layoutY" : 80
+      },
+      "configuration" : {
+        "useSystemReportsServer" : true,
+        "reportsServerEndpointUrl" : null,
+        "useReportConfigFromMessage" : true,
+        "reportConfig" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "95c628b0-cbcd-11ee-b827-474e1902aece"
+      },
+      "name" : "Report Dashboard A",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.report.TbGenerateReportNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 664,
+        "layoutY" : 169
+      },
+      "configuration" : {
+        "useSystemReportsServer" : true,
+        "reportsServerEndpointUrl" : null,
+        "useReportConfigFromMessage" : true,
+        "reportConfig" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "95c6ec00-cbcd-11ee-b827-474e1902aece"
+      },
+      "name" : "Report Dashboard B",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.report.TbGenerateReportNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 669,
+        "layoutY" : 265
+      },
+      "configuration" : {
+        "useSystemReportsServer" : true,
+        "reportsServerEndpointUrl" : null,
+        "useReportConfigFromMessage" : true,
+        "reportConfig" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "95c78840-cbcd-11ee-b827-474e1902aece"
+      },
+      "name" : "Report Dashboard C",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.report.TbGenerateReportNode"
+    } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
