@@ -43,6 +43,10 @@
       "toIndex" : 10,
       "type" : "Generate Report"
     }, {
+      "fromIndex" : 3,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
       "fromIndex" : 6,
       "toIndex" : 2,
       "type" : "False"
@@ -134,8 +138,9 @@
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 1000,
-        "layoutY" : 381
+        "description" : null,
+        "layoutX" : 1011,
+        "layoutY" : 383
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -144,7 +149,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -302,10 +307,30 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1313,
+        "layoutY" : 397
+      },
+      "configuration" : {
+        "ruleChainId" : "93aa99d0-ca5b-11ee-80d2-474e1902aece"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "98eedbc0-cbd4-11ee-b585-21e4bffd617b"
+      },
+      "name" : "to send reoport rule chain",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
