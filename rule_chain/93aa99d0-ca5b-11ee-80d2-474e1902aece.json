@@ -44,6 +44,10 @@
       "fromIndex" : 3,
       "toIndex" : 4,
       "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -168,6 +172,40 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1425,
+        "layoutY" : 125
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : true,
+        "smtpProtocol" : "smtp",
+        "smtpHost" : "localhost",
+        "smtpPort" : 25,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sandhya.yadav+dev2@xeeed.io",
+        "password" : "Sandhya@12112181"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0cf25490-cbd3-11ee-9015-a7e67e72b29c"
+      },
+      "name" : "Send email",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     } ],
     "ruleChainConnections" : null
   },
