@@ -56,13 +56,25 @@
       "fromIndex" : 8,
       "toIndex" : 11,
       "type" : "True"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 16,
+      "type" : "True"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 54,
-        "layoutY" : 245
+        "layoutX" : 80,
+        "layoutY" : 216
       },
       "configuration" : {
         "msgCount" : 0,
@@ -145,8 +157,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 322,
-        "layoutY" : 244
+        "layoutX" : 348,
+        "layoutY" : 215
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -226,8 +238,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 618,
-        "layoutY" : 241
+        "layoutX" : 644,
+        "layoutY" : 212
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -295,8 +307,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 886,
-        "layoutY" : 242
+        "layoutX" : 912,
+        "layoutY" : 213
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -379,13 +391,18 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 632,
-        "layoutY" : 568
+        "layoutX" : 26,
+        "layoutY" : 687
       },
       "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "if(msg.powerUsage >= 100 || msg.producedParts < 5 || msg.rejectedParts >= 5){\n    msg.alarmCount = metadata.alarmCount + 1;\n}\nelse{\n    msg.alarmCount = metadata.alarmCount;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "3a3a9e00-cfbe-11ee-b58c-478d284d7818",
+        "originatorType" : "DEVICE"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -393,12 +410,83 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bcd48050-ca33-11ee-a1af-a7e67e72b29c"
+        "id" : "d32596e0-cfcf-11ee-a550-01ba59c8406a"
       },
-      "name" : "count total alarms",
+      "name" : "BedroomTemperature meter",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 294,
+        "layoutY" : 686
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "status" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d3268140-cfcf-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Save to metadata",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 590,
+        "layoutY" : 683
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.status == \"running\";",
+        "tbelScript" : "return metadata.status == \"running\";"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d3274490-cfcf-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Script Filter",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 858,
+        "layoutY" : 684
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d327e0d0-cfcf-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Root rule chain",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
