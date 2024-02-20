@@ -61,13 +61,13 @@
       "toIndex" : 14,
       "type" : "Success"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 15,
-      "type" : "Success"
-    }, {
       "fromIndex" : 15,
       "toIndex" : 16,
-      "type" : "True"
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -391,8 +391,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 26,
-        "layoutY" : 687
+        "layoutX" : 16,
+        "layoutY" : 570
       },
       "configuration" : {
         "msgCount" : 0,
@@ -412,47 +412,48 @@
         "entityType" : "RULE_NODE",
         "id" : "d32596e0-cfcf-11ee-a550-01ba59c8406a"
       },
-      "name" : "BedroomTemperature meter",
+      "name" : "BedRoom Thermostat device",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 294,
-        "layoutY" : 686
+        "layoutX" : 268,
+        "layoutY" : 566
       },
       "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "fetchTo" : "METADATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "status" ],
-        "getLatestValueWithTs" : false
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
       },
-      "configurationVersion" : 1,
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "d3268140-cfcf-11ee-a550-01ba59c8406a"
+        "id" : "7bc2e2c0-cff9-11ee-bbfa-a34d36c3f055"
       },
-      "name" : "Save to metadata",
+      "name" : "save timeseries",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 590,
-        "layoutY" : 683
+        "layoutX" : 12,
+        "layoutY" : 767
       },
       "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "return metadata.status == \"running\";",
-        "tbelScript" : "return metadata.status == \"running\";"
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "07264af0-cfbe-11ee-a550-01ba59c8406a",
+        "originatorType" : "DEVICE"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -460,20 +461,50 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "d3274490-cfcf-11ee-a550-01ba59c8406a"
+        "id" : "7bc41b40-cff9-11ee-bbfa-a34d36c3f055"
       },
-      "name" : "Script Filter",
+      "name" : "BedRoom Energy Sensor",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 858,
-        "layoutY" : 684
+        "layoutX" : 282,
+        "layoutY" : 758
       },
       "configuration" : {
-        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7bc61710-cff9-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "save timeseries",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 16,
+        "layoutY" : 666
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "e97fcee0-cfbd-11ee-a2dd-dda04d5a084f",
+        "originatorType" : "DEVICE"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -481,12 +512,35 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "d327e0d0-cfcf-11ee-a550-01ba59c8406a"
+        "id" : "7bc6da60-cff9-11ee-bbfa-a34d36c3f055"
       },
-      "name" : "Root rule chain",
+      "name" : "BedRoom Humidity Sensor",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 268,
+        "layoutY" : 662
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7bc776a1-cff9-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "save timeseries",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },
