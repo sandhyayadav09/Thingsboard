@@ -1,0 +1,46 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "7a68ef50-cfbd-11ee-a922-37ae9eb95d8c"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "19dbdfc0-cfbe-11ee-a2dd-dda04d5a084f"
+    },
+    "label" : "",
+    "name" : "BedRoom Occupancy Sensor",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "Occupancy"
+  },
+  "credentials" : {
+    "credentialsId" : "MbnrBfxWKszc1s3w6E4z",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ],
+    "SHARED_SCOPE" : [ ]
+  }
+}
