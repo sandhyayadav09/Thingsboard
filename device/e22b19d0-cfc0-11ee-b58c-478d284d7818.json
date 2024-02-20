@@ -29,7 +29,7 @@
       "id" : "e22b19d0-cfc0-11ee-b58c-478d284d7818"
     },
     "label" : "",
-    "name" : "Main Switch",
+    "name" : "Main Switch A",
     "ownerId" : null,
     "softwareId" : null,
     "type" : "Main Switch"
@@ -40,7 +40,15 @@
     "credentialsValue" : null
   },
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1708413783211,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
