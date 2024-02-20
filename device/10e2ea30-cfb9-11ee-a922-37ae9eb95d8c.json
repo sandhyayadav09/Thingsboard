@@ -29,7 +29,7 @@
       "id" : "10e2ea30-cfb9-11ee-a922-37ae9eb95d8c"
     },
     "label" : "",
-    "name" : "Energy Meter",
+    "name" : "Energy Sensor",
     "ownerId" : null,
     "softwareId" : null,
     "type" : "BMS Device Profile"
@@ -40,7 +40,15 @@
     "credentialsValue" : null
   },
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1708410425529,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
