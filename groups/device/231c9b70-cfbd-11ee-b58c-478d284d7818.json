@@ -32,7 +32,7 @@
       "entityType" : "ENTITY_GROUP",
       "id" : "231c9b70-cfbd-11ee-b58c-478d284d7818"
     },
-    "name" : "Hall",
+    "name" : "Kitchen",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "0c6b0d70-c9b5-11ee-a09b-6fe9f38618ff"
