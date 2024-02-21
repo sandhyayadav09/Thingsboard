@@ -58,15 +58,15 @@
       "type" : "True"
     }, {
       "fromIndex" : 13,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
       "toIndex" : 16,
       "type" : "Success"
     }, {
-      "fromIndex" : 17,
+      "fromIndex" : 14,
       "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 17,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -419,29 +419,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 268,
-        "layoutY" : 566
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "7bc2e2c0-cff9-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "save timeseries",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 5,
         "layoutY" : 770
       },
@@ -467,29 +444,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 282,
-        "layoutY" : 758
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "7bc61710-cff9-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "save timeseries",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -521,26 +475,66 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 268,
-        "layoutY" : 662
+        "layoutX" : 470,
+        "layoutY" : 569
       },
       "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7bc776a1-cff9-11ee-bbfa-a34d36c3f055"
+        "id" : "c3288df0-d075-11ee-bbfa-a34d36c3f055"
       },
-      "name" : "save timeseries",
+      "name" : "Root",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 471,
+        "layoutY" : 657
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3299f60-d075-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 482,
+        "layoutY" : 756
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c32a62b0-d075-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
