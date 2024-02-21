@@ -58,7 +58,7 @@
       "type" : "True"
     }, {
       "fromIndex" : 13,
-      "toIndex" : 16,
+      "toIndex" : 25,
       "type" : "Success"
     }, {
       "fromIndex" : 14,
@@ -79,6 +79,14 @@
     }, {
       "fromIndex" : 21,
       "toIndex" : 23,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 16,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -487,8 +495,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 470,
-        "layoutY" : 569
+        "layoutX" : 943,
+        "layoutY" : 579
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -694,6 +702,64 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 340,
+        "layoutY" : 575
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ]
+        },
+        "dataToFetch" : "ATTRIBUTES",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "enabledAC" : "enabledAC",
+          "AClevel" : "AClevel"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ff2f0e10-d0a1-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "To originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 625,
+        "layoutY" : 574
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(metadata.enabledAC){\n    msg.temperature = metadata.AClevel;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ff301f80-d0a1-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
