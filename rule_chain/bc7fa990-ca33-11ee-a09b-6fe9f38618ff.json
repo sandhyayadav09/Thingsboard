@@ -753,7 +753,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "if(metadata.enabledAC){\n    msg.temperature = metadata.AClevel;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "if(metadata.enabledAC == \"true\"){\n    msg.temperature = metadata.AClevel;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -812,7 +812,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "if(metadata.enabledAC){\n    msg.temperature = metadata.AClevel;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var x = msg.energy/6;\nvar curr = msg.energy;\n\nif(metadata.enabledAC == \"false\"){\n    curr = curr-(x*3);\n}\nif(metadata.enabledFan == \"false\"){\n    curr = curr-x;\n}\nif(metadata.enabledLight == \"false\"){\n    curr = curr-(x*2);\n}\nif(curr < 0){\n    curr = 0;\n}\n\nmsg.energy = curr;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
