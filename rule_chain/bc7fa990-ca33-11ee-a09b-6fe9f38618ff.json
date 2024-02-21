@@ -68,6 +68,18 @@
       "fromIndex" : 15,
       "toIndex" : 17,
       "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 24,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 23,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -419,8 +431,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 5,
-        "layoutY" : 770
+        "layoutX" : 20,
+        "layoutY" : 740
       },
       "configuration" : {
         "msgCount" : 0,
@@ -447,8 +459,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 16,
-        "layoutY" : 666
+        "layoutX" : 15,
+        "layoutY" : 647
       },
       "configuration" : {
         "msgCount" : 0,
@@ -496,8 +508,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 471,
-        "layoutY" : 657
+        "layoutX" : 469,
+        "layoutY" : 643
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -517,8 +529,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 482,
-        "layoutY" : 756
+        "layoutX" : 476,
+        "layoutY" : 739
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -530,6 +542,153 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "c32a62b0-d075-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 58,
+        "layoutY" : 812
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "73421d80-cfbf-11ee-b58c-478d284d7818",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f87d5b20-d075-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "Hall Thermostat device",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 62,
+        "layoutY" : 982
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "451ac6f0-cfbf-11ee-a550-01ba59c8406a",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f87ebab0-d075-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "Hall Energy Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 57,
+        "layoutY" : 889
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { humidity: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "3c369fa0-cfbf-11ee-a922-37ae9eb95d8c",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f87f7e00-d075-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "Hall Humidity Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 512,
+        "layoutY" : 811
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f8812bb0-d075-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 511,
+        "layoutY" : 885
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f883ead0-d075-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 518,
+        "layoutY" : 981
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f8848710-d075-11ee-a2dd-dda04d5a084f"
       },
       "name" : "Root",
       "ruleChainId" : null,
