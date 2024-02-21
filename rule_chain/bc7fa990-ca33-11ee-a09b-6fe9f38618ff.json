@@ -62,7 +62,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 14,
-      "toIndex" : 18,
+      "toIndex" : 27,
       "type" : "Success"
     }, {
       "fromIndex" : 15,
@@ -87,6 +87,14 @@
     }, {
       "fromIndex" : 26,
       "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 18,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -537,8 +545,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 476,
-        "layoutY" : 739
+        "layoutX" : 980,
+        "layoutY" : 734
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -755,6 +763,65 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "ff301f80-d0a1-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 335,
+        "layoutY" : 732
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ]
+        },
+        "dataToFetch" : "ATTRIBUTES",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "enabledAC" : "enabledAC",
+          "enabledLight" : "enabledLight",
+          "enabledFan" : "enabledFan"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f562bec0-d0a3-11ee-a550-01ba59c8406a"
+      },
+      "name" : "To originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 648,
+        "layoutY" : 733
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(metadata.enabledAC){\n    msg.temperature = metadata.AClevel;\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5635b00-d0a3-11ee-a550-01ba59c8406a"
       },
       "name" : "Script",
       "ruleChainId" : null,
