@@ -1106,8 +1106,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 314,
-        "layoutY" : 965
+        "layoutX" : 337,
+        "layoutY" : 967
       },
       "configuration" : {
         "relationsQuery" : {
