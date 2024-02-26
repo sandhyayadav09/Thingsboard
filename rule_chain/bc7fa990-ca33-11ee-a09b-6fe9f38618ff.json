@@ -115,7 +115,7 @@
     }, {
       "fromIndex" : 33,
       "toIndex" : 31,
-      "type" : "Post attributes"
+      "type" : "Post telemetry"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
