@@ -116,10 +116,6 @@
       "fromIndex" : 32,
       "toIndex" : 33,
       "type" : "Post telemetry"
-    }, {
-      "fromIndex" : 34,
-      "toIndex" : 35,
-      "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -476,7 +472,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 2999,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50,150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -854,8 +850,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 994,
-        "layoutY" : 821
+        "layoutX" : 981,
+        "layoutY" : 827
       },
       "configuration" : {
         "relationsQuery" : {
@@ -888,8 +884,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1252,
-        "layoutY" : 825
+        "layoutX" : 1274,
+        "layoutY" : 830
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -964,8 +960,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2087,
-        "layoutY" : 833
+        "layoutX" : 2148,
+        "layoutY" : 840
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -984,55 +980,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 32,
-        "layoutY" : 1072
-      },
-      "configuration" : {
-        "msgCount" : 0,
-        "periodInSeconds" : 60,
-        "scriptLang" : "TBEL",
-        "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var lpg=getRandomNumber(20, 50);\nvar co = getRandomNumber(1800,2200);\n\nvar msg = { lpgLevel: lpg, COLevel : co };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "queueName" : null,
-        "originatorId" : "b36278d0-d463-11ee-a2dd-dda04d5a084f",
-        "originatorType" : "DEVICE"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "391678e0-d46a-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "Kitchen GAS Sensor",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 403,
-        "layoutY" : 1076
-      },
-      "configuration" : {
-        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "39178a50-d46a-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "Root rule chain",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
