@@ -863,7 +863,7 @@
             "entityTypes" : [ "ASSET" ]
           } ]
         },
-        "dataToFetch" : "ATTRIBUTES",
+        "dataToFetch" : "LATEST_TELEMETRY",
         "fetchTo" : "METADATA",
         "dataMapping" : {
           "totalPowerConsume" : "totalPowerConsume"
@@ -889,7 +889,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var x = msg.energy;\nmsg.energy = null;\nmsg.totalPowerConsume = parseInt(metadata.totalPowerConsume)+x;\nreturn {msg: msg, metadata: metadata, msgType: \"POST_ATTRIBUTES\"};",
+        "jsScript" : "var x = msg.energy;\nmsg.energy = null;\nmsg.totalPowerConsume = parseInt(metadata.totalPowerConsume)+x;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
