@@ -106,15 +106,15 @@
       "type" : "Success"
     }, {
       "fromIndex" : 30,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
       "toIndex" : 32,
       "type" : "Success"
     }, {
       "fromIndex" : 32,
       "toIndex" : 33,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 33,
-      "toIndex" : 31,
       "type" : "Post telemetry"
     } ],
     "firstNodeIndex" : 12,
@@ -907,30 +907,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2148,
-        "layoutY" : 832
-      },
-      "configuration" : {
-        "scope" : "SERVER_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : true
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "059e8630-d463-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "save attributes",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 1537,
         "layoutY" : 830
       },
@@ -981,6 +957,29 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2087,
+        "layoutY" : 833
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "463013e0-d467-11ee-a2dd-dda04d5a084f"
+      },
+      "name" : "save timeseries",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },
