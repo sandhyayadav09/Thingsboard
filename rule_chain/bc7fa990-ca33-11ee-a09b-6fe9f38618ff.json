@@ -907,8 +907,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1811,
-        "layoutY" : 831
+        "layoutX" : 2148,
+        "layoutY" : 832
       },
       "configuration" : {
         "scope" : "SERVER_SCOPE",
@@ -963,8 +963,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 740
+        "layoutX" : 1816,
+        "layoutY" : 832
       },
       "configuration" : {
         "version" : 0
