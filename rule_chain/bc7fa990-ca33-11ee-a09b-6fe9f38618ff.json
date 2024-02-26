@@ -987,22 +987,22 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 30,
-        "layoutY" : 1078
+        "layoutX" : 32,
+        "layoutY" : 1072
       },
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 60,
         "scriptLang" : "TBEL",
         "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var lpg=getRandomNumber(50, 150);\nvar co = getRandomNumber(1800,2200);\n\nvar msg = { lpgLevel: lpg, COLevel : co };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var lpg=getRandomNumber(20, 50);\nvar co = getRandomNumber(1800,2200);\n\nvar msg = { lpgLevel: lpg, COLevel : co };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b36278d0-d463-11ee-a2dd-dda04d5a084f",
         "originatorType" : "DEVICE"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
