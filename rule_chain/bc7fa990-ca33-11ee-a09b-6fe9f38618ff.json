@@ -74,7 +74,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 20,
-      "toIndex" : 38,
+      "toIndex" : 37,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -98,11 +98,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 33,
+      "toIndex" : 32,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 46,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -111,11 +111,11 @@
     }, {
       "fromIndex" : 30,
       "toIndex" : 31,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 32,
       "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 33,
+      "type" : "Success"
     }, {
       "fromIndex" : 33,
       "toIndex" : 34,
@@ -127,26 +127,26 @@
     }, {
       "fromIndex" : 35,
       "toIndex" : 36,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 37,
+      "toIndex" : 38,
       "type" : "Success"
     }, {
-      "fromIndex" : 36,
-      "toIndex" : 37,
-      "type" : "Post telemetry"
+      "fromIndex" : 38,
+      "toIndex" : 24,
+      "type" : "Success"
     }, {
       "fromIndex" : 38,
       "toIndex" : 39,
       "type" : "Success"
     }, {
-      "fromIndex" : 39,
-      "toIndex" : 24,
+      "fromIndex" : 38,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 39,
       "toIndex" : 40,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 39,
-      "toIndex" : 46,
       "type" : "Success"
     }, {
       "fromIndex" : 40,
@@ -159,22 +159,18 @@
     }, {
       "fromIndex" : 42,
       "toIndex" : 43,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 43,
-      "toIndex" : 44,
       "type" : "Post telemetry"
     }, {
+      "fromIndex" : 44,
+      "toIndex" : 46,
+      "type" : "Success"
+    }, {
       "fromIndex" : 45,
-      "toIndex" : 47,
+      "toIndex" : 44,
       "type" : "Success"
     }, {
       "fromIndex" : 46,
-      "toIndex" : 45,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 47,
-      "toIndex" : 30,
+      "toIndex" : 29,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -907,40 +903,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1209,
-        "layoutY" : 838
-      },
-      "configuration" : {
-        "relationsQuery" : {
-          "fetchLastLevelOnly" : true,
-          "direction" : "TO",
-          "maxLevel" : 2,
-          "filters" : [ {
-            "relationType" : "Contains",
-            "entityTypes" : [ "ASSET" ]
-          } ]
-        },
-        "dataToFetch" : "LATEST_TELEMETRY",
-        "fetchTo" : "METADATA",
-        "dataMapping" : {
-          "totalPowerConsume" : "totalPowerConsume"
-        }
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "059c8a60-d463-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "Building Power Usage",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
     }, {
       "additionalInfo" : {
         "description" : "",
