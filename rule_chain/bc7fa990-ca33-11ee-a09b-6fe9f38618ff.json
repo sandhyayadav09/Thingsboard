@@ -915,7 +915,7 @@
         "entityType" : null,
         "entityNamePattern" : null,
         "relationsQuery" : {
-          "fetchLastLevelOnly" : false,
+          "fetchLastLevelOnly" : true,
           "direction" : "TO",
           "maxLevel" : 2,
           "filters" : [ {
