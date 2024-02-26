@@ -889,7 +889,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var x = msg.energy;\nmsg.energy = null;\nmsg.totalPowerConsume = parseInt(metadata.totalPowerConsume)+x;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var x = msg.energy;\n// msg.energy = null;\nmsg.totalPowerConsume = parseInt(metadata.totalPowerConsume)+x;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
