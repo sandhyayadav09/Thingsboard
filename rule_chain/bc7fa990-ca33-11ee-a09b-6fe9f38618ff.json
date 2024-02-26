@@ -1055,7 +1055,7 @@
         "dataToFetch" : "LATEST_TELEMETRY",
         "fetchTo" : "METADATA",
         "dataMapping" : {
-          "bedroomTotalEnergyConsumed" : "bedroomTotalEnergyConsumed"
+          "totalEnergyConsumed" : "totalEnergyConsumed"
         }
       },
       "configurationVersion" : 1,
@@ -1078,7 +1078,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "msg.totalEnergyConsumed = parseInt(metadata.totalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -1247,7 +1247,7 @@
         "dataToFetch" : "LATEST_TELEMETRY",
         "fetchTo" : "METADATA",
         "dataMapping" : {
-          "bedroomTotalEnergyConsumed" : "bedroomTotalEnergyConsumed"
+          "totalEnergyConsumed" : "totalEnergyConsumed"
         }
       },
       "configurationVersion" : 1,
@@ -1270,7 +1270,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "msg.totalEnergyConsumed = parseInt(metadata.totalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
