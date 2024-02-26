@@ -74,7 +74,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 20,
-      "toIndex" : 39,
+      "toIndex" : 38,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -98,11 +98,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 34,
+      "toIndex" : 33,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 46,
+      "toIndex" : 48,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -115,11 +115,11 @@
     }, {
       "fromIndex" : 31,
       "toIndex" : 32,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 32,
-      "toIndex" : 33,
       "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 34,
+      "type" : "Success"
     }, {
       "fromIndex" : 34,
       "toIndex" : 35,
@@ -131,26 +131,26 @@
     }, {
       "fromIndex" : 36,
       "toIndex" : 37,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 38,
+      "toIndex" : 39,
       "type" : "Success"
     }, {
-      "fromIndex" : 37,
-      "toIndex" : 38,
-      "type" : "Post telemetry"
+      "fromIndex" : 39,
+      "toIndex" : 24,
+      "type" : "Success"
     }, {
       "fromIndex" : 39,
       "toIndex" : 40,
       "type" : "Success"
     }, {
-      "fromIndex" : 40,
-      "toIndex" : 24,
+      "fromIndex" : 39,
+      "toIndex" : 48,
       "type" : "Success"
     }, {
       "fromIndex" : 40,
       "toIndex" : 41,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 40,
-      "toIndex" : 46,
       "type" : "Success"
     }, {
       "fromIndex" : 41,
@@ -163,18 +163,22 @@
     }, {
       "fromIndex" : 43,
       "toIndex" : 44,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 44,
-      "toIndex" : 45,
       "type" : "Post telemetry"
     }, {
-      "fromIndex" : 46,
-      "toIndex" : 29,
+      "fromIndex" : 45,
+      "toIndex" : 49,
       "type" : "Success"
     }, {
-      "fromIndex" : 47,
-      "toIndex" : 48,
+      "fromIndex" : 46,
+      "toIndex" : 47,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 48,
+      "toIndex" : 45,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 30,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -910,8 +914,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1205,
-        "layoutY" : 847
+        "layoutX" : 1487,
+        "layoutY" : 823
       },
       "configuration" : {
         "relationsQuery" : {
@@ -944,8 +948,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1510,
-        "layoutY" : 846
+        "layoutX" : 1770,
+        "layoutY" : 825
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -964,38 +968,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1780,
-        "layoutY" : 841
-      },
-      "configuration" : {
-        "originatorSource" : "RELATED",
-        "entityType" : null,
-        "entityNamePattern" : null,
-        "relationsQuery" : {
-          "fetchLastLevelOnly" : true,
-          "direction" : "TO",
-          "maxLevel" : 2,
-          "filters" : [ {
-            "relationType" : "Contains",
-            "entityTypes" : [ "ASSET" ]
-          } ]
-        }
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "059f4980-d463-11ee-bbfa-a34d36c3f055"
-      },
-      "name" : "change originator",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -1368,8 +1340,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 931,
-        "layoutY" : 854
+        "layoutX" : 1175,
+        "layoutY" : 827
       },
       "configuration" : {
         "queueName" : "SequentialByOriginator"
@@ -1435,6 +1407,65 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 912,
+        "layoutY" : 827
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "TO",
+          "maxLevel" : 2,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "baeecac0-d483-11ee-a550-01ba59c8406a"
+      },
+      "name" : "change originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1467,
+        "layoutY" : 931
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "totalPowerConsume" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "baf00340-d483-11ee-a550-01ba59c8406a"
+      },
+      "name" : "originator attributes",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     } ],
     "ruleChainConnections" : null
   },
