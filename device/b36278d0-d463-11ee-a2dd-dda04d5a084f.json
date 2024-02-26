@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "b0d4a200-d463-11ee-a922-37ae9eb95d8c"
+      "id" : "78a9bf80-d465-11ee-bbfa-a34d36c3f055"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -29,10 +29,10 @@
       "id" : "b36278d0-d463-11ee-a2dd-dda04d5a084f"
     },
     "label" : "",
-    "name" : "LPG gas",
+    "name" : "Gas Sensor",
     "ownerId" : null,
     "softwareId" : null,
-    "type" : "LPG gas"
+    "type" : "Gas Sensor"
   },
   "credentials" : {
     "credentialsId" : "mE2yX0QdHhs4MVmmGBra",
@@ -40,7 +40,23 @@
     "credentialsValue" : null
   },
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1708924143102,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1708924143102,
+      "longValue" : 1708924143099,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
