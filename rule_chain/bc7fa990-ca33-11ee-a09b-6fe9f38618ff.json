@@ -629,8 +629,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 962,
-        "layoutY" : 684
+        "layoutX" : 1128,
+        "layoutY" : 683
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -855,8 +855,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 335,
-        "layoutY" : 732
+        "layoutX" : 547,
+        "layoutY" : 728
       },
       "configuration" : {
         "relationsQuery" : {
@@ -891,8 +891,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 648,
-        "layoutY" : 733
+        "layoutX" : 842,
+        "layoutY" : 721
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -981,8 +981,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 970,
-        "layoutY" : 753
+        "layoutX" : 1136,
+        "layoutY" : 752
       },
       "configuration" : {
         "relationsQuery" : {
@@ -1015,8 +1015,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1279,
-        "layoutY" : 745
+        "layoutX" : 1445,
+        "layoutY" : 744
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1038,8 +1038,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1552,
-        "layoutY" : 746
+        "layoutX" : 1718,
+        "layoutY" : 745
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -1070,8 +1070,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1833,
-        "layoutY" : 737
+        "layoutX" : 1999,
+        "layoutY" : 736
       },
       "configuration" : {
         "version" : 0
@@ -1091,8 +1091,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2146,
-        "layoutY" : 743
+        "layoutX" : 2312,
+        "layoutY" : 742
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1386,8 +1386,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 235,
-        "layoutY" : 783
+        "layoutX" : 284,
+        "layoutY" : 740
       },
       "configuration" : {
         "useMetadataPeriodInSecondsPatterns" : false,
