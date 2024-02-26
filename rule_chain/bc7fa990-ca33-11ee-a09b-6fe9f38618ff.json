@@ -74,7 +74,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 20,
-      "toIndex" : 37,
+      "toIndex" : 48,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -175,6 +175,10 @@
     }, {
       "fromIndex" : 47,
       "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 48,
+      "toIndex" : 37,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -1387,7 +1391,7 @@
       },
       "configuration" : {
         "useMetadataPeriodInSecondsPatterns" : false,
-        "periodInSeconds" : 2,
+        "periodInSeconds" : 4,
         "periodInSecondsPattern" : null,
         "maxPendingMsgs" : 1000
       },
@@ -1398,6 +1402,30 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "b19ea4c0-d48f-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "delay",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 253,
+        "layoutY" : 1021
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 2,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e640a740-d490-11ee-a922-37ae9eb95d8c"
       },
       "name" : "delay",
       "ruleChainId" : null,
