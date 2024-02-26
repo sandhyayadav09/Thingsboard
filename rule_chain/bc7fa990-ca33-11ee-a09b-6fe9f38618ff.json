@@ -1043,7 +1043,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "msg.bedroomTotalEnergyConsumed = metadata.bedroomTotalEnergyConsumed+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
