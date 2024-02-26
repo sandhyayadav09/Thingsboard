@@ -1041,8 +1041,8 @@
         "layoutY" : 745
       },
       "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "scriptLang" : "JS",
+        "jsScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
