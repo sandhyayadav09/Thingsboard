@@ -851,12 +851,12 @@
       },
       "configuration" : {
         "relationsQuery" : {
-          "fetchLastLevelOnly" : false,
+          "fetchLastLevelOnly" : true,
           "direction" : "TO",
           "maxLevel" : 2,
           "filters" : [ {
             "relationType" : "Contains",
-            "entityTypes" : [ ]
+            "entityTypes" : [ "ASSET" ]
           } ]
         },
         "dataToFetch" : "ATTRIBUTES",
