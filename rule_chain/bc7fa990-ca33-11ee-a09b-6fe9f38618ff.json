@@ -102,15 +102,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 48,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
       "toIndex" : 30,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 30,
-      "toIndex" : 31,
       "type" : "Success"
     }, {
       "fromIndex" : 31,
@@ -146,7 +142,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 39,
-      "toIndex" : 48,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 40,
@@ -166,18 +162,10 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 45,
-      "toIndex" : 49,
+      "toIndex" : 46,
       "type" : "Success"
     }, {
       "fromIndex" : 46,
-      "toIndex" : 47,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 48,
-      "toIndex" : 45,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 49,
       "toIndex" : 30,
       "type" : "Success"
     } ],
@@ -685,7 +673,7 @@
         "msgCount" : 0,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var pp=getRandomNumber(50, 100);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var pp=getRandomNumber(50, 150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "451ac6f0-cfbf-11ee-a550-01ba59c8406a",
@@ -914,8 +902,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1487,
-        "layoutY" : 823
+        "layoutX" : 1205,
+        "layoutY" : 847
       },
       "configuration" : {
         "relationsQuery" : {
@@ -948,8 +936,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1770,
-        "layoutY" : 825
+        "layoutX" : 1510,
+        "layoutY" : 846
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1340,8 +1328,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1175,
-        "layoutY" : 827
+        "layoutX" : 931,
+        "layoutY" : 854
       },
       "configuration" : {
         "queueName" : "SequentialByOriginator"
@@ -1361,111 +1349,35 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 25,
-        "layoutY" : 1035
+        "layoutX" : 1233,
+        "layoutY" : 932
       },
       "configuration" : {
-        "msgCount" : 0,
-        "periodInSeconds" : 60,
-        "scriptLang" : "TBEL",
-        "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var co=getRandomNumber(20, 50);\nvar lpg=getRandomNumber(1500, 2200);\n\nvar msg = { COLevel: co, LPGLevel: lpg };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "queueName" : null,
-        "originatorId" : "b36278d0-d463-11ee-a2dd-dda04d5a084f",
-        "originatorType" : "DEVICE"
+        "latestTsKeyNames" : [ "totalPowerConsume" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "FIRST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 2,
+        "startIntervalTimeUnit" : "MINUTES",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MINUTES"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdc09430-d476-11ee-a2dd-dda04d5a084f"
+        "id" : "c2bbf1e0-d485-11ee-a550-01ba59c8406a"
       },
-      "name" : "Kitchen gas sensor",
+      "name" : "originator telemetry",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 350,
-        "layoutY" : 1031
-      },
-      "configuration" : {
-        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fdc13070-d476-11ee-a2dd-dda04d5a084f"
-      },
-      "name" : "Root rule chain",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 912,
-        "layoutY" : 827
-      },
-      "configuration" : {
-        "originatorSource" : "RELATED",
-        "entityType" : null,
-        "entityNamePattern" : null,
-        "relationsQuery" : {
-          "fetchLastLevelOnly" : true,
-          "direction" : "TO",
-          "maxLevel" : 2,
-          "filters" : [ {
-            "relationType" : "Contains",
-            "entityTypes" : [ "ASSET" ]
-          } ]
-        }
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "baeecac0-d483-11ee-a550-01ba59c8406a"
-      },
-      "name" : "change originator",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1467,
-        "layoutY" : 931
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "fetchTo" : "METADATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "totalPowerConsume" ],
-        "latestTsKeyNames" : [ ],
-        "getLatestValueWithTs" : false
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "baf00340-d483-11ee-a550-01ba59c8406a"
-      },
-      "name" : "originator attributes",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
     } ],
     "ruleChainConnections" : null
   },
