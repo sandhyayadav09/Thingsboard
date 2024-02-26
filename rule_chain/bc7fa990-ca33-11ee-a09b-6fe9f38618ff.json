@@ -94,11 +94,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 18,
+      "toIndex" : 29,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 29,
+      "toIndex" : 34,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -116,6 +116,14 @@
       "fromIndex" : 32,
       "toIndex" : 33,
       "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 34,
+      "toIndex" : 35,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 35,
+      "toIndex" : 18,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -565,8 +573,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 980,
-        "layoutY" : 734
+        "layoutX" : 1570,
+        "layoutY" : 701
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -980,6 +988,63 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 952,
+        "layoutY" : 707
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ]
+        },
+        "dataToFetch" : "LATEST_TELEMETRY",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "bedroomTotalEnergyConsumed" : "bedroomTotalEnergyConsumed"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f92e5b80-d46e-11ee-a922-37ae9eb95d8c"
+      },
+      "name" : "related entity data",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1256,
+        "layoutY" : 703
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "msg.bedroomTotalEnergyConsumed = metadata.bedroomTotalEnergyConsumed+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f92f9400-d46e-11ee-a922-37ae9eb95d8c"
+      },
+      "name" : "script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
