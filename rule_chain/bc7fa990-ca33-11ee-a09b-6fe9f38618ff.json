@@ -852,7 +852,7 @@
       "configuration" : {
         "relationsQuery" : {
           "fetchLastLevelOnly" : false,
-          "direction" : "FROM",
+          "direction" : "TO",
           "maxLevel" : 2,
           "filters" : [ {
             "relationType" : "Contains",
@@ -936,7 +936,7 @@
         "entityNamePattern" : null,
         "relationsQuery" : {
           "fetchLastLevelOnly" : false,
-          "direction" : "FROM",
+          "direction" : "TO",
           "maxLevel" : 2,
           "filters" : [ {
             "relationType" : "Contains",
