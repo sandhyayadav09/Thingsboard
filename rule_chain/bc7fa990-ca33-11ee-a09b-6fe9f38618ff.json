@@ -1015,8 +1015,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 389,
-        "layoutY" : 1056
+        "layoutX" : 403,
+        "layoutY" : 1076
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
