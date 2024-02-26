@@ -102,11 +102,15 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 45,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
       "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 31,
       "type" : "Success"
     }, {
       "fromIndex" : 31,
@@ -142,7 +146,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 39,
-      "toIndex" : 45,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 40,
@@ -167,6 +171,10 @@
     }, {
       "fromIndex" : 46,
       "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 47,
+      "toIndex" : 45,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -524,7 +532,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50,150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -671,7 +679,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50, 150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -936,8 +944,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1510,
-        "layoutY" : 846
+        "layoutX" : 1770,
+        "layoutY" : 874
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1328,8 +1336,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 931,
-        "layoutY" : 854
+        "layoutX" : 1164,
+        "layoutY" : 915
       },
       "configuration" : {
         "queueName" : "SequentialByOriginator"
@@ -1349,8 +1357,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1233,
-        "layoutY" : 932
+        "layoutX" : 1407,
+        "layoutY" : 911
       },
       "configuration" : {
         "latestTsKeyNames" : [ "totalPowerConsume" ],
@@ -1378,6 +1386,38 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 956,
+        "layoutY" : 915
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "FROM",
+          "maxLevel" : 2,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0c09a950-d486-11ee-b58c-478d284d7818"
+      },
+      "name" : "change originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     } ],
     "ruleChainConnections" : null
   },
