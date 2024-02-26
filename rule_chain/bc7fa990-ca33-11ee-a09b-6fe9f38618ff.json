@@ -906,8 +906,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1737,
-        "layoutY" : 839
+        "layoutX" : 1789,
+        "layoutY" : 878
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -929,8 +929,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2053,
-        "layoutY" : 834
+        "layoutX" : 2107,
+        "layoutY" : 877
       },
       "configuration" : {
         "version" : 0
@@ -950,8 +950,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2374,
-        "layoutY" : 830
+        "layoutX" : 2406,
+        "layoutY" : 878
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1298,8 +1298,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1164,
-        "layoutY" : 915
+        "layoutX" : 1221,
+        "layoutY" : 884
       },
       "configuration" : {
         "queueName" : "SequentialByOriginator"
@@ -1319,8 +1319,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 956,
-        "layoutY" : 915
+        "layoutX" : 963,
+        "layoutY" : 877
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -1351,8 +1351,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1445,
-        "layoutY" : 916
+        "layoutX" : 1506,
+        "layoutY" : 880
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
