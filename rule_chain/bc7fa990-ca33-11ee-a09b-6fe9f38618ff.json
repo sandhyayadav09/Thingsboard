@@ -102,7 +102,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 47,
+      "toIndex" : 46,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -146,7 +146,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 39,
-      "toIndex" : 47,
+      "toIndex" : 46,
       "type" : "Success"
     }, {
       "fromIndex" : 40,
@@ -166,15 +166,15 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 45,
-      "toIndex" : 46,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 46,
-      "toIndex" : 30,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 47,
-      "toIndex" : 45,
+      "toIndex" : 30,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -532,7 +532,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50,150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -679,7 +679,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50, 150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -910,8 +910,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1205,
-        "layoutY" : 847
+        "layoutX" : 1209,
+        "layoutY" : 838
       },
       "configuration" : {
         "relationsQuery" : {
@@ -944,8 +944,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1770,
-        "layoutY" : 874
+        "layoutX" : 1737,
+        "layoutY" : 839
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1357,38 +1357,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1407,
-        "layoutY" : 911
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "totalPowerConsume" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : false,
-        "startIntervalPattern" : "",
-        "endIntervalPattern" : "",
-        "startInterval" : 2,
-        "startIntervalTimeUnit" : "MINUTES",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "MINUTES"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c2bbf1e0-d485-11ee-a550-01ba59c8406a"
-      },
-      "name" : "originator telemetry",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 956,
         "layoutY" : 915
       },
@@ -1418,6 +1386,33 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1445,
+        "layoutY" : 916
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "totalPowerConsume" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b0bf3ae0-d487-11ee-a922-37ae9eb95d8c"
+      },
+      "name" : "originator attributes",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     } ],
     "ruleChainConnections" : null
   },
