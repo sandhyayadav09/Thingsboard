@@ -62,7 +62,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 14,
-      "toIndex" : 47,
+      "toIndex" : 27,
       "type" : "Success"
     }, {
       "fromIndex" : 15,
@@ -74,7 +74,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 20,
-      "toIndex" : 48,
+      "toIndex" : 37,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -99,10 +99,6 @@
     }, {
       "fromIndex" : 28,
       "toIndex" : 32,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 28,
-      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -141,10 +137,6 @@
       "toIndex" : 39,
       "type" : "Success"
     }, {
-      "fromIndex" : 38,
-      "toIndex" : 45,
-      "type" : "Success"
-    }, {
       "fromIndex" : 39,
       "toIndex" : 40,
       "type" : "Success"
@@ -174,11 +166,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 47,
-      "toIndex" : 27,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 48,
-      "toIndex" : 37,
+      "toIndex" : 48,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -629,8 +617,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1128,
-        "layoutY" : 683
+        "layoutX" : 962,
+        "layoutY" : 684
       },
       "configuration" : {
         "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
@@ -855,8 +843,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 547,
-        "layoutY" : 728
+        "layoutX" : 335,
+        "layoutY" : 732
       },
       "configuration" : {
         "relationsQuery" : {
@@ -891,8 +879,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 842,
-        "layoutY" : 721
+        "layoutX" : 648,
+        "layoutY" : 733
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -914,8 +902,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1789,
-        "layoutY" : 878
+        "layoutX" : 1737,
+        "layoutY" : 839
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -937,8 +925,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2107,
-        "layoutY" : 877
+        "layoutX" : 2053,
+        "layoutY" : 834
       },
       "configuration" : {
         "version" : 0
@@ -958,8 +946,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2406,
-        "layoutY" : 878
+        "layoutX" : 2374,
+        "layoutY" : 830
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -981,8 +969,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1136,
-        "layoutY" : 752
+        "layoutX" : 970,
+        "layoutY" : 753
       },
       "configuration" : {
         "relationsQuery" : {
@@ -1015,8 +1003,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1445,
-        "layoutY" : 744
+        "layoutX" : 1279,
+        "layoutY" : 745
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1038,8 +1026,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1718,
-        "layoutY" : 745
+        "layoutX" : 1552,
+        "layoutY" : 746
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -1070,8 +1058,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1999,
-        "layoutY" : 736
+        "layoutX" : 1833,
+        "layoutY" : 737
       },
       "configuration" : {
         "version" : 0
@@ -1091,8 +1079,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2312,
-        "layoutY" : 742
+        "layoutX" : 2146,
+        "layoutY" : 743
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1114,8 +1102,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 337,
-        "layoutY" : 967
+        "layoutX" : 314,
+        "layoutY" : 965
       },
       "configuration" : {
         "relationsQuery" : {
@@ -1306,8 +1294,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1221,
-        "layoutY" : 884
+        "layoutX" : 1164,
+        "layoutY" : 915
       },
       "configuration" : {
         "queueName" : "SequentialByOriginator"
@@ -1327,8 +1315,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 963,
-        "layoutY" : 877
+        "layoutX" : 956,
+        "layoutY" : 915
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -1359,8 +1347,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1506,
-        "layoutY" : 880
+        "layoutX" : 1445,
+        "layoutY" : 916
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -1373,7 +1361,7 @@
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -1386,51 +1374,73 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 284,
-        "layoutY" : 740
+        "layoutX" : 1892,
+        "layoutY" : 919
       },
       "configuration" : {
-        "useMetadataPeriodInSecondsPatterns" : false,
-        "periodInSeconds" : 4,
-        "periodInSecondsPattern" : null,
-        "maxPendingMsgs" : 1000
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "a8b37790-cfb8-11ee-bbfa-a34d36c3f055"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ "ASSET" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "totalEnergyConsumed",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "totalPowerConsume"
+        } ],
+        "queueName" : null
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "b19ea4c0-d48f-11ee-bbfa-a34d36c3f055"
+        "id" : "ba4209d0-d4a0-11ee-a922-37ae9eb95d8c"
       },
-      "name" : "delay",
+      "name" : "aggregate",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 253,
-        "layoutY" : 1021
+        "layoutX" : 2183,
+        "layoutY" : 920
       },
       "configuration" : {
-        "useMetadataPeriodInSecondsPatterns" : false,
-        "periodInSeconds" : 2,
-        "periodInSecondsPattern" : null,
-        "maxPendingMsgs" : 1000
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "e640a740-d490-11ee-a922-37ae9eb95d8c"
+        "id" : "ba42f430-d4a0-11ee-a922-37ae9eb95d8c"
       },
-      "name" : "delay",
+      "name" : "save timeseries",
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },
