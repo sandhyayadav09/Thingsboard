@@ -62,7 +62,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 14,
-      "toIndex" : 27,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 15,
@@ -171,6 +171,10 @@
     }, {
       "fromIndex" : 46,
       "toIndex" : 29,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 47,
+      "toIndex" : 27,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
@@ -528,7 +532,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50,150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -675,7 +679,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 360,
         "scriptLang" : "JS",
         "jsScript" : "var pp=getRandomNumber(50, 150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
@@ -1375,6 +1379,30 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 235,
+        "layoutY" : 783
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 2,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b19ea4c0-d48f-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "delay",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
     } ],
     "ruleChainConnections" : null
   },
