@@ -110,8 +110,12 @@
       "type" : "Success"
     }, {
       "fromIndex" : 32,
-      "toIndex" : 31,
+      "toIndex" : 33,
       "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 31,
+      "type" : "Post attributes"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -956,6 +960,27 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1634,
+        "layoutY" : 740
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "10004570-d466-11ee-bbfa-a34d36c3f055"
+      },
+      "name" : "message type switch",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     } ],
     "ruleChainConnections" : null
   },
