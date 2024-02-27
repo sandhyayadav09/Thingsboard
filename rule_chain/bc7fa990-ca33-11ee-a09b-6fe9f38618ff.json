@@ -1414,8 +1414,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1889,
-        "layoutY" : 940
+        "layoutX" : 51,
+        "layoutY" : 1506
       },
       "configuration" : {
         "periodValue" : 1,
@@ -1461,8 +1461,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2191,
-        "layoutY" : 936
+        "layoutX" : 353,
+        "layoutY" : 1502
       },
       "configuration" : {
         "defaultTTL" : 0,
