@@ -65,6 +65,10 @@
       "toIndex" : 27,
       "type" : "Success"
     }, {
+      "fromIndex" : 14,
+      "toIndex" : 63,
+      "type" : "Success"
+    }, {
       "fromIndex" : 15,
       "toIndex" : 17,
       "type" : "Success"
@@ -75,6 +79,10 @@
     }, {
       "fromIndex" : 20,
       "toIndex" : 37,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 62,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -1820,6 +1828,54 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 208,
+        "layoutY" : 1027
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 1,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "594a3b30-d549-11ee-b58c-478d284d7818"
+      },
+      "name" : "delay",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 199,
+        "layoutY" : 692
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 2,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "594b4ca0-d549-11ee-b58c-478d284d7818"
+      },
+      "name" : "delay node",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
     } ],
     "ruleChainConnections" : null
   },
