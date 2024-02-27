@@ -168,6 +168,46 @@
       "fromIndex" : 47,
       "toIndex" : 48,
       "type" : "Success"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 52,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 50,
+      "toIndex" : 54,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 51,
+      "toIndex" : 53,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 54,
+      "toIndex" : 55,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 56,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 57,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 57,
+      "toIndex" : 58,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 58,
+      "toIndex" : 59,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 59,
+      "toIndex" : 60,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 60,
+      "toIndex" : 61,
+      "type" : "Post telemetry"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -1436,6 +1476,345 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "ba42f430-d4a0-11ee-a922-37ae9eb95d8c"
+      },
+      "name" : "save timeseries",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 22,
+        "layoutY" : 1139
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(20, 60);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "701d0530-cfbe-11ee-a550-01ba59c8406a",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5afbc00-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Kitchen Thermostat device",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 23,
+        "layoutY" : 1306
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 360,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(50, 150);\n\nvar msg = { energy: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "88ba9850-cfbe-11ee-bbfa-a34d36c3f055",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b0cd70-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Kitchen Energy Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 21,
+        "layoutY" : 1217
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(10,30);\n\nvar msg = { humidity: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "62b0bdb0-cfbe-11ee-a2dd-dda04d5a084f",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b1b7d0-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Kitchen Humidity Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 509,
+        "layoutY" : 1139
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b22d00-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 508,
+        "layoutY" : 1213
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b2f050-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 311,
+        "layoutY" : 1293
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ]
+        },
+        "dataToFetch" : "ATTRIBUTES",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "enabledAC" : "enabledAC",
+          "enabledLight" : "enabledLight",
+          "enabledFan" : "enabledFan"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b3b3a0-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "To originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 630,
+        "layoutY" : 1296
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var x = msg.energy/6;\nvar curr = msg.energy;\n\nif(metadata.enabledAC == \"false\"){\n    curr = curr-(x*3);\n}\nif(metadata.enabledFan == \"false\"){\n    curr = curr-x;\n}\nif(metadata.enabledLight == \"false\"){\n    curr = curr-(x*2);\n}\nif(curr < 1){\n    curr = 0;\n}\n\nmsg.energy = curr;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b49e00-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 933,
+        "layoutY" : 1297
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b53a40-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "Root",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 936,
+        "layoutY" : 1375
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ]
+        },
+        "dataToFetch" : "LATEST_TELEMETRY",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "totalEnergyConsumed" : "totalEnergyConsumed"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b5d680-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "related entity data",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1245,
+        "layoutY" : 1367
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg.totalEnergyConsumed = parseInt(metadata.totalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "msg.bedroomTotalEnergyConsumed = parseInt(metadata.bedroomTotalEnergyConsumed)+msg.energy;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b672c0-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1518,
+        "layoutY" : 1368
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : true,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b78430-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "change originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1799,
+        "layoutY" : 1359
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b86e90-d532-11ee-a550-01ba59c8406a"
+      },
+      "name" : "message type switch",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2112,
+        "layoutY" : 1365
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b8e3c0-d532-11ee-a550-01ba59c8406a"
       },
       "name" : "save timeseries",
       "ruleChainId" : null,
