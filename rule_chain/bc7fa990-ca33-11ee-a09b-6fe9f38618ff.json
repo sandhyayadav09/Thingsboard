@@ -1901,7 +1901,7 @@
         "jsScript" : "var pp=getRandomNumber(1500, 2200);\n\nvar msg = { LPGLevel: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var pp=getRandomNumber(1, 25);\nvar rp=getRandomNumber(1, 20);\nvar power=getRandomNumber(50,500);\n\nvar msg = { producedParts: pp, rejectedParts: rp,powerUsageWh: power };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
-        "originatorId" : "701d0530-cfbe-11ee-a550-01ba59c8406a",
+        "originatorId" : "b36278d0-d463-11ee-a2dd-dda04d5a084f",
         "originatorType" : "DEVICE"
       },
       "configurationVersion" : 0,
