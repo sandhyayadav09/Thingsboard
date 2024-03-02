@@ -2010,7 +2010,7 @@
         "periodInSeconds" : 60,
         "scriptLang" : "TBEL",
         "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var pp=getRandomNumber(15, 30);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(15, 35);\n\nvar msg = { temperature: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "38308af0-d876-11ee-a922-37ae9eb95d8c",
         "originatorType" : "DEVICE"
@@ -2070,7 +2070,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ba3940d0-d87d-11ee-b58c-478d284d7818"
+        "id" : "4622aaa1-d87e-11ee-a922-37ae9eb95d8c"
       },
       "name" : "UI device generatoor",
       "ruleChainId" : null,
@@ -2091,7 +2091,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ba3a2b30-d87d-11ee-b58c-478d284d7818"
+        "id" : "4623e320-d87e-11ee-a922-37ae9eb95d8c"
       },
       "name" : "root rule chain",
       "ruleChainId" : null,
@@ -2106,9 +2106,9 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 60,
-        "scriptLang" : "TBEL",
-        "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var pp=getRandomNumber(5, 25);\n\nvar msg = { temperature2: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "scriptLang" : "JS",
+        "jsScript" : "var pp=getRandomNumber(5, 40);\n\nvar msg = { temperature2: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(5, 40);\n\nvar msg = { temperature2: pp };\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "38308af0-d876-11ee-a922-37ae9eb95d8c",
         "originatorType" : "DEVICE"
@@ -2119,7 +2119,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ba3aee80-d87d-11ee-b58c-478d284d7818"
+        "id" : "46247f60-d87e-11ee-a922-37ae9eb95d8c"
       },
       "name" : "UI device generatoor",
       "ruleChainId" : null,
@@ -2140,7 +2140,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ba3b8ac0-d87d-11ee-b58c-478d284d7818"
+        "id" : "462542b0-d87e-11ee-a922-37ae9eb95d8c"
       },
       "name" : "root rule chain",
       "ruleChainId" : null,
