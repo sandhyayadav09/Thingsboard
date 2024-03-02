@@ -240,6 +240,10 @@
       "fromIndex" : 72,
       "toIndex" : 73,
       "type" : "Success"
+    }, {
+      "fromIndex" : 74,
+      "toIndex" : 75,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 12,
     "nodes" : [ {
@@ -2143,6 +2147,55 @@
         "id" : "462542b0-d87e-11ee-a922-37ae9eb95d8c"
       },
       "name" : "root rule chain",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 38,
+        "layoutY" : 1457
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "scriptLang" : "TBEL",
+        "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var pp=getRandomNumber(1500, 2200);\n\nvar msg = { COLevel: pp};\nvar metadata = { };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nfunction getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "b36278d0-d463-11ee-a2dd-dda04d5a084f",
+        "originatorType" : "DEVICE"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d1302700-d8b8-11ee-b58c-478d284d7818"
+      },
+      "name" : "Kitchen Gas Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 281,
+        "layoutY" : 1442
+      },
+      "configuration" : {
+        "ruleChainId" : "0cc53b60-c9b5-11ee-a09b-6fe9f38618ff"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d1311160-d8b8-11ee-b58c-478d284d7818"
+      },
+      "name" : "Root rule chain",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
