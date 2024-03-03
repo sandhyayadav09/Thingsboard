@@ -183,6 +183,7 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 1000,
         "layoutY" : 583
       },
@@ -191,7 +192,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
